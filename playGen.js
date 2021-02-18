@@ -5,6 +5,7 @@ window.playGen = gen => {
     const i = setInterval(_ => {
         if (document.querySelectorAll("button[type=button]").length === 6) {
             document.querySelectorAll("button[type=button]")[2].click();
+			if(location.href.includes("/generator"))history.back();
             clearInterval(i);
         }
     }, 99)
